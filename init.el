@@ -1,0 +1,42 @@
+;;;;
+;; alexjreid
+;;;;
+
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
+
+(package-initialize)
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+(defvar my-packages
+  '(
+    paredit
+    clojure-mode
+    clojure-mode-extra-font-locking
+    cider
+    ido-completing-read+
+    smex
+    projectile
+    rainbow-delimiters
+    tagedit
+    magit))
+
+(if (eq system-type 'darwin)
+    (add-to-list 'my-packages 'exec-path-from-shell))
+
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
+
+(add-to-list 'load-path "~/.emacs.d/custom")
+
+(load "ui.el")
+(load "clojure.el")
+(load "editing.el")
+(load "navigation.el")
+(load "misc.el")
+
+

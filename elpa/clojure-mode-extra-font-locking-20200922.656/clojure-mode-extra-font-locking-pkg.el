@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "clojure-mode-extra-font-locking" "20200922.656" "Extra font-locking for Clojure mode" '((clojure-mode "3.0")) :commit "f26379bc18b089e794d4c3c3a2756c8c9ec0882f" :authors '(("Bozhidar Batsov" . "bozhidar@batsov.com")) :maintainer '("Bozhidar Batsov" . "bozhidar@batsov.com") :keywords '("languages" "lisp") :url "http://github.com/clojure-emacs/clojure-mode")
