@@ -65,3 +65,6 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
+(setq-default sh-basic-offset 2)
+(setq-default sh-indentation 2)
+(setq create-lockfiles nil)
