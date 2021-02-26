@@ -8,6 +8,8 @@
 
 (require 'clojure-mode-extra-font-locking)
 
+(setq clojure-align-forms-automatically t)
+
 ;; syntax hilighting for midje
 (add-hook 'clojure-mode-hook
           (lambda ()
