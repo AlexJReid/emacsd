@@ -41,7 +41,6 @@
                                                "backups"))))
 (setq auto-save-default nil)
 
-
 ;; comments
 (defun toggle-comment-on-line ()
   "comment or uncomment current line"
@@ -64,7 +63,12 @@
       (ns-get-selection-internal 'CLIPBOARD)
     (quit nil)))
 
+(defun vlm-markdown-mode-hook ()
+  (visual-line-mode 1))
+(add-hook 'markdown-mode-hook 'vlm-markdown-mode-hook)
+
 (setq electric-indent-mode 1)
 (setq-default sh-basic-offset 2)
 (setq-default sh-indentation 2)
 (setq create-lockfiles nil)
+

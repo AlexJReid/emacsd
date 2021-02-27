@@ -22,7 +22,12 @@
     projectile
     rainbow-delimiters
     tagedit
-    magit))
+    magit
+    yaml-mode
+    json-mode
+    tagedit
+    markdown-mode
+    go-mode))
 
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
@@ -45,7 +50,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(projectile exec-path-from-shell tagedit smex rainbow-delimiters paredit magit ido-completing-read+ clojure-mode-extra-font-locking cider)))
+   (quote
+    (projectile exec-path-from-shell tagedit smex rainbow-delimiters paredit magit ido-completing-read+ clojure-mode-extra-font-locking cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
