@@ -1,4 +1,4 @@
-;; Key binding to use "hippie expand" for text autocompletion
+;; Key binding to usse "hippie expand" for text autocompletion
 ;; http://www.emacswiki.org/emacs/HippieExpand
 (global-set-key (kbd "M-/") 'hippie-expand)
 
@@ -14,17 +14,12 @@
 (show-paren-mode 1)
 
 ;; Highlight current line
-(global-hl-line-mode 0)
-
-;; Interactive search key bindings. By default, C-s runs
-;; isearch-forward, so this swaps the bindings.
-;(global-set-key (kbd "C-s") 'isearch-forward-regexp)
-;(global-set-key (kbd "C-r") 'isearch-backward-regexp)
-;(global-set-key (kbd "C-M-s") 'isearch-forward)
-;(global-set-key (kbd "C-M-r") 'isearch-backward)
+(global-hl-line-mode 1)
 
 ;; Don't use hard tabs
 (setq-default indent-tabs-mode nil)
+
+(setq ring-bell-function 'ignore)
 
 ;; When you visit a file, point goes to the last place where it
 ;; was when you previously visited the same file.
@@ -72,3 +67,4 @@
 (setq-default sh-indentation 2)
 (setq create-lockfiles nil)
 
+;(global-set-key (kbd "RET") 'newline-and-indent)

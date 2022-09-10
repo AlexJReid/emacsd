@@ -17,8 +17,7 @@
 (setq recentf-save-file (concat user-emacs-directory ".recentf"))
 (require 'recentf)
 (recentf-mode 1)
-(setq recentf-max-menu-items 40)
-
+(setq recentf-max-menu-items 10)
 
 ;; ido-mode allows you to more easily navigate choices. For example,
 ;; when you want to switch buffers, ido presents you with a list
@@ -58,4 +57,8 @@
 (global-set-key (kbd "M-x") 'smex)
 
 ;; projectile everywhere!
-(projectile-global-mode)
+;;(projectile-global-mode)
+
+(require 'dired-sidebar)
+(dired-sidebar-toggle-sidebar)
+

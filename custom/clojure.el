@@ -7,7 +7,6 @@
 (add-hook 'clojure-mode-hook 'subword-mode)
 
 (require 'clojure-mode-extra-font-locking)
-
 (setq clojure-align-forms-automatically t)
 
 ;; syntax hilighting for midje
@@ -22,7 +21,16 @@
                 (1 font-lock-keyword-face))))
             (define-clojure-indent (fact 1))
             (define-clojure-indent (facts 1))
+            (put-clojure-indent 'let 1)
             (rainbow-delimiters-mode)))
+
+(use-package flycheck-clj-kondo
+  :ensure t)
+
+(use-package clojure-mode
+  :ensure t
+  :config
+  (require 'flycheck-clj-kondo))
 
 ;;;;
 ;; Cider
@@ -53,7 +61,7 @@
 
 (defun cider-refresh ()
   (interactive)
-  (cider-interactive-eval (format "(user/reset)")))
+  (cider-interactive-eval (format "(dev/reset)")))
 
 (defun cider-user-ns ()
   (interactive)
