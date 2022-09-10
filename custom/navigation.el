@@ -59,6 +59,3 @@
 ;; projectile everywhere!
 ;;(projectile-global-mode)
 
-(require 'dired-sidebar)
-(dired-sidebar-toggle-sidebar)
-

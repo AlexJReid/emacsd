@@ -8,3 +8,5 @@ transient
 ido.last
 .DS_Store
 backups
+eln-cache
+elpa

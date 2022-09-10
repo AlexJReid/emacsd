@@ -67,4 +67,4 @@
 (setq-default sh-indentation 2)
 (setq create-lockfiles nil)
 
-;(global-set-key (kbd "RET") 'newline-and-indent)
+;; (global-set-key (kbd "RET") 'newline-and-indent)

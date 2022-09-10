@@ -14,7 +14,7 @@
 (defvar my-packages
   '(
     paredit
-    ;clojure-mode
+    clojure-mode
     clojure-mode-extra-font-locking
     cider
     aggressive-indent
@@ -46,8 +46,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- ;;'(package-selected-packages
- ;;  '(ac-cider clojure-mode dired-sidebar cider-hydra projectile exec-path-from-shell tagedit smex rainbow-delimiters paredit magit ido-completing-read+ clojure-mode-extra-font-locking cider))
  '(safe-local-variable-values
    '((cider-shadow-watched-builds "script")
      (cider-shadow-default-options . "script")
@@ -61,6 +59,7 @@
      (cider-default-cljs-repl . shadow)))
  '(tool-bar-mode nil)
  '(warning-suppress-log-types '((comp))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

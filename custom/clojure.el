@@ -22,15 +22,9 @@
             (define-clojure-indent (fact 1))
             (define-clojure-indent (facts 1))
             (put-clojure-indent 'let 1)
+            (require 'flycheck-clj-kondo)
+            (flycheck-mode)
             (rainbow-delimiters-mode)))
-
-(use-package flycheck-clj-kondo
-  :ensure t)
-
-(use-package clojure-mode
-  :ensure t
-  :config
-  (require 'flycheck-clj-kondo))
 
 ;;;;
 ;; Cider
